@@ -35,27 +35,13 @@ import java.util.Arrays;
 
 public class MaxNumWords {
     public int mostWordsFound(String[] sentences) {
-//        int wordCount = 0;
-//        int max = 0;
-//        for(String s : sentences){
-//            for(int i = 0; i < s.length(); i++){
-//
-//                wordCount = (int) Arrays.stream(s.split(" ")).count();
-//
-//            }
-//        }
-//        if(wordCount > max) max = wordCount;
-//        return max;
         int max = 0;
         for(int i = 0;i<sentences.length;i++){
-            String[] newStr = sentences[i].split(" ");
-//            System.out.println(i + ":" + newStr.length);
-            max = Math.max(newStr.length,max);
-
+            String[] numWords = sentences[i].split(" ");
+            max = Math.max(numWords.length,max);
         }
         return max;
     }
-
 
     public static void main(String[] args) {
         MaxNumWords mnw = new MaxNumWords();
